@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="icon" th:href="@{/assets/img/Logo MII resize.png}">
+<head>
+	<title>Print Departemen</title>
+</head>
+<body>
+ 
+	<center>
+ 
+		<h2>DATA LAPORAN Departemen</h2>
+		<h4>MASTER Departemen</h4>
+ 
+	</center>
+ 
+	<table border="1" style="width: 100%">
+		<tr>
+			<th width="1%">No</th>
+                        <th>Nama Barang</th>
+			<th>Dikirim ke departemen</th>
+                        <th>Jumlah yang dikirim</th>
+                        <th>Jumlah yang dipakai</th>
+                        <th>Tanggal Transaksi</th>
+			
+		</tr>
+
+                <tr th:each="data,no : ${rekapdept}">
+                        <td th:text="${no.count}"></td>
+                        <td th:text="${data.inventori.nama}"></td>
+                        <td th:text="${data.departemen.nama}"></td>
+                        <td th:text="${data.inventori.jumlahKeluar}"></td>
+                        <td th:text="${data.jumlahDeptKeluar}"><</td>
+                        <td th:text="${data.tglUpdate}"></td>
+                </tr>
+	</table>
+ 
+	<script>
+		window.print();
+	</script>
+ 
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="asset.manajemen_asset.manajemen_jar_0.0.1-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>asset.manajemen.asset.manajemen.model.Inventori</class>
+    <class>asset.manajemen.asset.manajemen.model.AdminRole</class>
+    <class>asset.manajemen.asset.manajemen.model.Divisi</class>
+    <class>asset.manajemen.asset.manajemen.model.Departemen</class>
+    <class>asset.manajemen.asset.manajemen.model.Admin</class>
+    <class>asset.manajemen.asset.manajemen.model.RekapInventoriDept</class>
+    <class>asset.manajemen.asset.manajemen.model.Role</class>
+    <class>asset.manajemen.asset.manajemen.model.Akses</class>
+    <class>asset.manajemen.asset.manajemen.model.User</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+      <property name="javax.persistence.jdbc.user" value="system"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.password" value="system"/>
+    </properties>
+  </persistence-unit>
+</persistence>
